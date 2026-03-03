@@ -9,22 +9,6 @@ body {
   color: #1c1f26;
 }
 
-/* ===== Header ===== */
-
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 2rem 4rem;
-}
-
-.header nav a {
-  margin-left: 2rem;
-  color: var(--color-main);
-  font-weight: 600;
-  cursor: pointer;
-}
-
 /* ===== Hero ===== */
 
 .hero {

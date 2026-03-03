@@ -1,15 +1,9 @@
+import { Header } from "@/app/components"
+
 export default function Home() {
   return (
     <main className="home">
-      <header className="header">
-        <div className="logo">S</div>
-        <nav>
-          <a>ABOUT</a>
-          <a>TIMELINE</a>
-          <a>WORKS</a>
-          <a>CONTACT</a>
-        </nav>
-      </header>
+      <Header />
       <div className="wave" />
 
       <section className="hero">
