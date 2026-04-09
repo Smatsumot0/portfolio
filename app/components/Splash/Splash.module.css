@@ -17,7 +17,8 @@
   position: absolute;
   width: var(--size);
   height: var(--size);
-  border: 1px solid color-mix(in srgb, var(--drop-color) 70%, blue);
+  border: 1px solid
+    color-mix(in srgb, var(--drop-color) 70%, var(--color-main) 30%);
   background: var(--drop-color);
   filter: blur(0.5px);
   border-radius: 999px;
