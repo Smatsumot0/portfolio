@@ -1,22 +1,10 @@
-import { Header } from "@/app/components"
+import { Header, Hero } from "@/app/components"
 
 export default function Home() {
   return (
     <main className="home">
       <Header />
-
-      <section className="hero">
-        <h1 className="title">S.Matsumoto</h1>
-        <p className="subtitle">
-          Hello, I`m a<br />
-          Frontend Developer
-        </p>
-
-        <ul className="links">
-          <li>GitHub</li>
-          <li>Zenn</li>
-        </ul>
-      </section>
+      <Hero />
     </main>
   )
 }
