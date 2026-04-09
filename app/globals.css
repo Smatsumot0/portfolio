@@ -9,6 +9,13 @@ body {
   color: #1c1f26;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
 /* ===== Hero ===== */
 
 .hero {

@@ -4,7 +4,6 @@ export default function Home() {
   return (
     <main className="home">
       <Header />
-      <div className="wave" />
 
       <section className="hero">
         <h1 className="title">S.Matsumoto</h1>

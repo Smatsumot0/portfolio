@@ -1,13 +1,26 @@
+:root {
+  --height-header: clamp(80px, 20vw, 140px);
+}
+
 .header {
+  position: relative;
+  height: var(--height-header);
+  padding: 16px 32px;
+}
+
+.navigation {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2rem 4rem;
+  padding: 0;
+  position: relative;
+  z-index: 1;
 }
 
-.header nav a {
+.navigation nav a {
   margin-left: 2rem;
   color: var(--color-main);
   font-weight: 600;
   cursor: pointer;
 }
+
