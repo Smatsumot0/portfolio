@@ -7,7 +7,7 @@ export type TimelineProject = {
   }
   role: string
   description: string
-  skills: string[]
+  techStack: string[]
 }
 
 export type TimelineCompany = {
