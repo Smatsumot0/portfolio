@@ -1,4 +1,4 @@
-import { TimelineCompany } from "../types/Company"
+import { TimelineCompany } from "../types"
 
 export const timelineData: TimelineCompany[] = [
   {
@@ -19,7 +19,7 @@ export const timelineData: TimelineCompany[] = [
         },
         description:
           "既存Webアプリのフロントエンド改修および新規画面開発を担当。",
-        skills: ["React", "TypeScript", "CSS Modules", "GraphQL"],
+        techStack: ["React", "TypeScript", "CSS Modules", "GraphQL"],
       },
       {
         id: "project-2",
@@ -31,7 +31,7 @@ export const timelineData: TimelineCompany[] = [
         },
         description:
           "旧来システムの管理画面を Next.js ベースで再構築。API連携や状態管理も担当。",
-        skills: ["Next.js", "TypeScript", "REST API", "React Hook Form"],
+        techStack: ["Next.js", "TypeScript", "REST API", "React Hook Form"],
       },
     ],
   },
@@ -53,7 +53,7 @@ export const timelineData: TimelineCompany[] = [
         },
         description:
           "既存Webアプリのフロントエンド改修および新規画面開発を担当。",
-        skills: ["React", "TypeScript", "CSS Modules", "GraphQL"],
+        techStack: ["React", "TypeScript", "CSS Modules", "GraphQL"],
       },
       {
         id: "project-2",
@@ -65,7 +65,7 @@ export const timelineData: TimelineCompany[] = [
         },
         description:
           "旧来システムの管理画面を Next.js ベースで再構築。API連携や状態管理も担当。",
-        skills: ["Next.js", "TypeScript", "REST API", "React Hook Form"],
+        techStack: ["Next.js", "TypeScript", "REST API", "React Hook Form"],
       },
     ],
   },

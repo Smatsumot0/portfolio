@@ -1,6 +1,6 @@
 import { Title } from "@/app/components/ui"
 import styles from "./Company.module.css"
-import { TimelineCompany } from "../../types/Company"
+import { TimelineCompany } from "../../types"
 
 type CompanyProps = {
   company: TimelineCompany
