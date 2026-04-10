@@ -16,3 +16,7 @@ body {
   overflow: hidden;
 }
 
+.contents {
+  padding: 0 clamp(20px, 5vw, 4rem);
+}
+

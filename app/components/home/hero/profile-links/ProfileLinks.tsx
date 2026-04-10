@@ -1,4 +1,4 @@
-import { Link } from "../Link/Link"
+import { Link } from "../../../common/link/Link"
 import style from "./ProfileLinks.module.css"
 
 export function ProfileLinks() {
