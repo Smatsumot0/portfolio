@@ -17,11 +17,11 @@ export function ProjectItem({ project }: ProjectItemProps) {
         </Title>
       </div>
 
-      <p className={styles.title}>{title}</p>
-
-      {description ? <p className={styles.description}>{description}</p> : null}
-
-      {techStack.length > 0 ? (
+      <div className={styles.content}>
+        <Title as="h4" variant="small" className={styles.title}>
+          {title}
+        </Title>
+        <p className={styles.description}>{description}</p>
         <ul className={styles.techList}>
           {techStack.map((tech) => (
             <li key={tech} className={styles.techItem}>
@@ -29,7 +29,7 @@ export function ProjectItem({ project }: ProjectItemProps) {
             </li>
           ))}
         </ul>
-      ) : null}
+      </div>
     </li>
   )
 }

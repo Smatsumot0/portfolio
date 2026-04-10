@@ -1,0 +1,39 @@
+.root {
+  display: grid;
+  gap: 8px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+}
+
+.title {
+  font-weight: normal;
+}
+
+.content {
+  display: grid;
+  gap: 4px;
+}
+
+.description {
+  margin: 0;
+}
+
+.techList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  list-style: none;
+  margin: 8px 0 0;
+  padding: 0;
+}
+
+.techItem {
+  padding: 4px 10px;
+  border: thin solid var(--color-main);
+  border-radius: 999px;
+  font-size: 0.7rem;
+}
+

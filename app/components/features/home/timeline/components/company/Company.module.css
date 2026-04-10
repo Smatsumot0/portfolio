@@ -63,5 +63,7 @@
   list-style: none;
   padding: 0;
   margin: 0;
+  display: grid;
+  gap: 24px;
 }
 

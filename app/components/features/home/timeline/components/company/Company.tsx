@@ -1,6 +1,7 @@
 import { Title } from "@/app/components/ui"
 import styles from "./Company.module.css"
 import { TimelineCompany } from "../../types"
+import { ProjectItem } from "../project-item/ProjectItem"
 
 type CompanyProps = {
   company: TimelineCompany
@@ -34,12 +35,7 @@ export function Company({ company }: CompanyProps) {
 
           <ul className={styles.projectList}>
             {projects.map((project) => (
-              <li key={project.id} className={styles.projectItem}>
-                <Title as="h3" variant="small">
-                  {project.role}
-                </Title>
-                {project.title}
-              </li>
+              <ProjectItem key={project.id} project={project} />
             ))}
           </ul>
         </div>
