@@ -9,15 +9,7 @@
   gap: 16px;
 }
 
-.links li {
-  background: var(--color-main);
-  color: white;
+.profileLink {
   width: 100px;
-  border-radius: 4px;
 }
 
-.links li a {
-  padding: 8px 0;
-  display: flex;
-  justify-content: center;
-}

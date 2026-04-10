@@ -1,0 +1,11 @@
+.buttonLike {
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  background: var(--color-main);
+  color: white;
+  border: thin solid var(--color-main);
+  border-radius: 4px;
+  padding: 8px;
+}
+

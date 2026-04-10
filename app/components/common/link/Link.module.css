@@ -1,7 +1,9 @@
 .link {
-  width: 100%;
-  height: 100%;
-  color: inherit;
   text-decoration: none;
+}
+
+/* 普通のリンク */
+.text {
+  color: var(--color-main);
 }
 

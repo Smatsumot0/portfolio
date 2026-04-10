@@ -1,4 +1,4 @@
-import { Link } from "../../../common/link/Link"
+import { Link } from "@/app/components/common"
 import style from "./ProfileLinks.module.css"
 
 export function ProfileLinks() {
@@ -17,7 +17,9 @@ export function ProfileLinks() {
     <ul className={style.links}>
       {links.map((link) => (
         <li key={link.title}>
-          <Link title={link.title} href={link.href} />
+          <Link href={link.href} variant="button" className={style.profileLink}>
+            {link.title}
+          </Link>
         </li>
       ))}
     </ul>
