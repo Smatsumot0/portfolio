@@ -8,7 +8,7 @@ export type SectionProps = {
 export function Section({ title, children }: SectionProps) {
   return (
     <section>
-      <Title title={title} />
+      <Title>{title}</Title>
       {children}
     </section>
   )
