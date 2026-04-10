@@ -1,20 +1,11 @@
-import { About, Header, Hero, SectionGroup, Timeline } from "@/app/components"
+import { Home } from "@/app/components"
+import { Header } from "@/app/components/layout"
 
-export default function Home() {
+export default function Page() {
   return (
     <main className="home">
       <Header />
-      <Hero />
-      <SectionGroup>
-        <section>
-          <About />
-          <section>
-            <Timeline />
-            {/* WORKS */}
-          </section>
-          {/* CONTACT */}
-        </section>
-      </SectionGroup>
+      <Home />
     </main>
   )
 }

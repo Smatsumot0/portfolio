@@ -1,4 +1,4 @@
-import { Link } from "@/app/components/common"
+import { Link } from "@/app/components/ui"
 import style from "./ProfileLinks.module.css"
 
 export function ProfileLinks() {

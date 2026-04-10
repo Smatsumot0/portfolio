@@ -1,5 +1,0 @@
-export * from "./about/About"
-export * from "./header/Header"
-export * from "./hero/Hero"
-export * from "./section-group/SectionGroup"
-export * from "./timeline/Timeline"

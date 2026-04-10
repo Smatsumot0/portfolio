@@ -1,4 +1,4 @@
-import { Title } from "@/app/components/common"
+import { Title } from "@/app/components/ui"
 
 export type SectionProps = {
   title: string
