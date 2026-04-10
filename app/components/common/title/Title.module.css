@@ -2,6 +2,7 @@
   font-weight: bold;
 }
 
+/* variant */
 .section {
   font-size: 1.3rem;
   text-transform: uppercase;
@@ -9,4 +10,9 @@
 }
 
 .card {
+}
+
+/* align */
+.center {
+  text-align: center;
 }

@@ -18,7 +18,13 @@ export function Title({
 }: TitleProps) {
   const Tag = as
   return (
-    <Tag className={clsx(style.title, style[variant], className, align)}>
+    <Tag
+      className={clsx(
+        style.title,
+        style[variant],
+        className,
+        align === "center" && style.center,
+      )}>
       {children}
     </Tag>
   )
