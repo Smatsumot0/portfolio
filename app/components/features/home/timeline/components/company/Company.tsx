@@ -1,4 +1,3 @@
-import { Title } from "@/app/components/ui"
 import styles from "./Company.module.css"
 import { TimelineCompany } from "../../types"
 import { ProjectItem } from "../project-item/ProjectItem"
