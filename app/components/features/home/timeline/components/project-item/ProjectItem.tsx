@@ -1,4 +1,4 @@
-import { Title } from "@/app/components/ui"
+import { TechStack, Title } from "@/app/components/ui"
 import styles from "./ProjectItem.module.css"
 import { TimelineProject } from "../../types"
 
@@ -22,13 +22,7 @@ export function ProjectItem({ project }: ProjectItemProps) {
           {title}
         </Title>
         <p className={styles.description}>{description}</p>
-        <ul className={styles.techList}>
-          {techStack.map((tech) => (
-            <li key={tech} className={styles.techItem}>
-              {tech}
-            </li>
-          ))}
-        </ul>
+        <TechStack techStack={techStack} className={styles.techStack} />
       </div>
     </li>
   )

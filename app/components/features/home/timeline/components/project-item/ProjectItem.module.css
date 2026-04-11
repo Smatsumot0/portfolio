@@ -21,19 +21,7 @@
   margin: 0;
 }
 
-.techList {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  list-style: none;
+.techStack {
   margin: 8px 0 0;
-  padding: 0;
-}
-
-.techItem {
-  padding: 4px 10px;
-  border: thin solid var(--color-main);
-  border-radius: 999px;
-  font-size: 0.7rem;
 }
 
