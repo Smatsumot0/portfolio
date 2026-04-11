@@ -22,7 +22,7 @@ export function ProjectItem({ project }: ProjectItemProps) {
           {title}
         </Title>
         <p className={styles.description}>{description}</p>
-        <TechStack techStack={techStack} className={styles.techStack} />
+        <TechStack items={techStack} className={styles.techStack} />
       </div>
     </li>
   )

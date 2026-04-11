@@ -2,16 +2,16 @@ import clsx from "clsx"
 import styles from "./TechStack.module.css"
 
 export type TechStackProps = {
-  techStack: string[]
+  items: string[]
   className?: string
 }
 
-export function TechStack({ techStack, className }: TechStackProps) {
+export function TechStack({ items, className }: TechStackProps) {
   return (
     <ul className={clsx(styles.techList, className)}>
-      {techStack.map((tech) => (
-        <li key={tech} className={styles.techItem}>
-          {tech}
+      {items.map((item) => (
+        <li key={item} className={styles.techItem}>
+          {item}
         </li>
       ))}
     </ul>
