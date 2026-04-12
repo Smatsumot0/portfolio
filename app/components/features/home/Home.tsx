@@ -10,7 +10,7 @@ export function Home() {
   return (
     <div className={styles.home}>
       <Hero />
-      <SectionGroup>
+      <SectionGroup containerClassName={styles.sectionGroup}>
         <About />
         <TwoColumn
           leftContent={<Timeline />}

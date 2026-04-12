@@ -1,3 +1,9 @@
 .home {
   width: var(--width-content);
 }
+
+.sectionGroup {
+  display: grid;
+  gap: 64px;
+}
+

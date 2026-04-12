@@ -2,12 +2,18 @@ import { Container } from "@/app/components/layout"
 
 export type SectionGroupProps = {
   children: React.ReactNode
+  className?: string
+  containerClassName?: string
 }
 
-export function SectionGroup({ children }: SectionGroupProps) {
+export function SectionGroup({
+  children,
+  className,
+  containerClassName,
+}: SectionGroupProps) {
   return (
-    <section className="section-group">
-      <Container>{children}</Container>
+    <section className={className}>
+      <Container className={containerClassName}>{children}</Container>
     </section>
   )
 }
