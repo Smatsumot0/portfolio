@@ -1,16 +1,15 @@
-import { Section } from "@/app/components/layout"
-import style from "./Timeline.module.css"
+import { Section, Stack } from "@/app/components/layout"
 import { timelineData } from "./data/timeline-data"
 import { Company } from "./components"
 
 export function Timeline() {
   return (
     <Section title="Timeline">
-      <ul className={style.timeline}>
+      <Stack>
         {timelineData.map((company) => (
           <Company company={company} key={company.id} />
         ))}
-      </ul>
+      </Stack>
     </Section>
   )
 }

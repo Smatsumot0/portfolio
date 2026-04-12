@@ -1,10 +1,12 @@
 :root {
   --height-header: clamp(80px, 20vw, 140px);
+  --width-header: 1100px;
 }
 
 .header {
   position: relative;
   height: var(--height-header);
+  width: var(--width-header);
   padding: 16px 32px;
 }
 

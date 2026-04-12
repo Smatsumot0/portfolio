@@ -1,6 +1,7 @@
-import { TechStack, Title } from "@/app/components/ui"
+import { ItemContent, ItemHeader, TechStack, Title } from "@/app/components/ui"
 import styles from "./ProjectItem.module.css"
 import { TimelineProject } from "../../types"
+import { ItemSection } from "@/app/components/ui/item/ItemSection"
 
 type ProjectItemProps = {
   project: TimelineProject
@@ -10,21 +11,24 @@ export function ProjectItem({ project }: ProjectItemProps) {
   const { title, role, description, techStack } = project
 
   return (
-    <li className={styles.root}>
-      <div className={styles.header}>
+    <ItemContent as="li">
+      <ItemHeader className={styles.header}>
         <Title as="h3" variant="small">
           {role}
         </Title>
-      </div>
+      </ItemHeader>
 
-      <div className={styles.content}>
+      <ItemSection>
         <Title as="h4" variant="small" className={styles.title}>
           {title}
         </Title>
         <p className={styles.description}>{description}</p>
-        <TechStack items={techStack} className={styles.techStack} />
-      </div>
-    </li>
+      </ItemSection>
+
+      <ItemSection>
+        <TechStack items={techStack} />
+      </ItemSection>
+    </ItemContent>
   )
 }
 

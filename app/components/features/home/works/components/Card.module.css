@@ -1,0 +1,54 @@
+.root {
+}
+
+/* 左側 アプリイメージ */
+.thumbnail {
+  width: 100px;
+  height: 200px;
+  border-radius: 16px;
+  background: var(--color-main);
+  margin-top: 4px;
+}
+
+/* 右側 コンテンツ */
+.content {
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 8px;
+}
+
+.title {
+  color: var(--color-main);
+}
+
+.description {
+  margin: 8px 0 0;
+}
+
+.highlights {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  gap: 8px;
+}
+
+.highlights li {
+  position: relative;
+}
+
+.highlightIcon {
+  color: var(--color-main);
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.links {
+  list-style: none;
+  display: flex;
+  gap: 8px;
+  padding: 0;
+}
+
+.links a {
+  padding: 4px 16px;
+}
+

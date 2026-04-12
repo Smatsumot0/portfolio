@@ -12,11 +12,10 @@ export type TitleProps = {
 export function Title({
   children,
   variant = "section",
-  as = "h2",
+  as: Tag = "h2",
   align = "left",
   className,
 }: TitleProps) {
-  const Tag = as
   return (
     <Tag
       className={clsx(
