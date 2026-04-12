@@ -1,5 +1,5 @@
 :root {
-  --height-header: clamp(80px, 20vw, 140px);
+  --height-header: clamp(80px, 20vw, 180px);
   --width-header: 1100px;
 }
 

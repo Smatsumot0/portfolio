@@ -1,10 +1,5 @@
 .root {
-  border-bottom: thin solid var(--color-main);
   position: relative;
-}
-
-.root:last-child {
-  border-bottom: none;
 }
 
 /* ===== 左：ラインエリア ===== */

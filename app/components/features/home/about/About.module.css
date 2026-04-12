@@ -1,4 +1,30 @@
 .about {
+}
+
+.stackItem {
+  gap: 0;
+}
+
+.about p {
+  margin-inline: 0;
+  margin-block: 0 16px;
+  line-height: 1.9;
   width: var(--width-text);
+}
+
+.about p:has(br) {
+  margin-bottom: 24px;
+}
+
+.about strong {
+  font-weight: 600;
+  color: var(--color-main);
+  margin-inline: 8px;
+}
+
+.about p.lead {
+  font-size: 1.05rem;
+  font-weight: 500;
+  margin-bottom: 24px;
 }
 

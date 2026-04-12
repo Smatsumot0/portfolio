@@ -1,0 +1,30 @@
+.section {
+  position: relative;
+  border-radius: 16px;
+  padding: 24px 16px;
+}
+
+@media (hover: hover) {
+  .section:hover {
+    animation: grow 0.8s ease-out;
+  }
+}
+
+@keyframes grow {
+  0% {
+    box-shadow: none;
+    background: transparent;
+  }
+  50% {
+    box-shadow:
+      0 0 0 1px var(--color-highlight),
+      0 0 12px var(--color-highlight),
+      0 0 24px var(--color-highlight-strong);
+    background: var(--color-highlight-soft);
+  }
+  100% {
+    box-shadow: none;
+    background: transparent;
+  }
+}
+

@@ -10,16 +10,16 @@ export function Home() {
   return (
     <div className={styles.home}>
       <Hero />
-      <SectionGroup containerClassName={styles.sectionGroup}>
+      <SectionGroup>
         <About />
         <TwoColumn
           leftContent={<Timeline />}
           rightContent={<Works />}
-          columns="1fr 1.2fr"
+          columns="1fr 1.18fr"
           gap="large"
         />
-        {/* CONTACT */}
       </SectionGroup>
+      {/* CONTACT */}
     </div>
   )
 }

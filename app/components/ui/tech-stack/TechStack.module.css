@@ -1,7 +1,7 @@
 .techList {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: 4px;
   list-style: none;
   padding: 0;
 }

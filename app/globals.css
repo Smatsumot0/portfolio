@@ -1,15 +1,18 @@
 :root {
   --width-content: 1120px;
-  --width-text: 760px;
+  --width-text: 640px;
 
   --color-main: #0265da;
+  --color-highlight-soft: rgba(2, 101, 218, 0.04);
+  --color-highlight: rgba(2, 101, 218, 0.06);
+  --color-highlight-strong: rgba(2, 101, 218, 0.1);
 }
 
 body {
   margin: 0;
   font-family: system-ui, sans-serif;
   background: #f6f7f9;
-  color: #1c1f26;
+  color: #3f4552;
 }
 
 *,
