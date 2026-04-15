@@ -7,7 +7,7 @@ import {
   Title,
   ItemStack,
 } from "@/app/components/ui"
-import { Work } from "../types"
+import { Work } from "../../types"
 import styles from "./Card.module.css"
 import { CheckCircleIcon } from "@/app/components/ui/icon"
 import { StackItem, TwoColumn } from "@/app/components/layout"

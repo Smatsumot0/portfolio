@@ -1,5 +1,5 @@
-import { Card } from "@/app/components/features/home/works/components/Card"
-import { worksData } from "@/app/components/features/home/works/data/works-data"
+import { Card } from "./components"
+import { worksData } from "./data/works-data"
 import { Section, Stack } from "@/app/components/layout"
 
 export function Works() {
