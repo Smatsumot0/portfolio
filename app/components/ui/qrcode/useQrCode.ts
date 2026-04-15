@@ -11,12 +11,11 @@ export function useQrCode(value: string, options: UseQrCodeOptions) {
   const [isLoading, setIsLoading] = useState(true)
   const [hasError, setHasError] = useState(false)
 
-  const { pixelSize, margin } = options
-
   useEffect(() => {
     let isMounted = true
 
     async function generate() {
+      const { pixelSize, margin } = options
       try {
         setIsLoading(true)
         setHasError(false)
@@ -45,7 +44,7 @@ export function useQrCode(value: string, options: UseQrCodeOptions) {
     return () => {
       isMounted = false
     }
-  }, [value, pixelSize, margin])
+  }, [value, options])
 
   return {
     imageUrl,
