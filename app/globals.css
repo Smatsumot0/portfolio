@@ -3,9 +3,13 @@
   --width-text: 640px;
 
   --color-main: #0265da;
+
   --color-highlight-soft: rgba(2, 101, 218, 0.04);
   --color-highlight: rgba(2, 101, 218, 0.06);
   --color-highlight-strong: rgba(2, 101, 218, 0.1);
+
+  --color-blue-300: #69b8ff;
+  --color-blue-400: #a9dbff;
 }
 
 body {

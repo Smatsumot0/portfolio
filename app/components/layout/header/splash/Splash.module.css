@@ -1,7 +1,7 @@
 :root {
   --drop-blue: var(--color-main);
-  --drop-light: #69b8ff;
-  --drop-pale: #a9dbff;
+  --drop-light: var(--color-blue-300);
+  --drop-pale: var(--color-blue-400);
 }
 
 .splash {
