@@ -1,0 +1,41 @@
+.root {
+  display: grid;
+  justify-items: center;
+  gap: 12px;
+  background: white;
+}
+
+.title {
+  margin: 0;
+  color: var(--color-main);
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.image {
+  display: block;
+}
+
+.description {
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+/* ===== サイズ ===== */
+.small {
+  padding: 4px;
+  border-radius: 4px;
+}
+
+.medium {
+  padding: 5px;
+  border-radius: 8px;
+}
+
+.large {
+  padding: 16px;
+  border-radius: 16px;
+}
+
