@@ -11,6 +11,7 @@ import { Work } from "../../types"
 import styles from "./Card.module.css"
 import { CheckCircleIcon } from "@/app/components/ui/icon"
 import { StackItem, TwoColumn } from "@/app/components/layout"
+import { Thumbnail } from "../thumbnail/Thumbnail"
 
 export type CardProps = {
   work: Work
@@ -23,7 +24,7 @@ export function Card({ work }: CardProps) {
       <TwoColumn
         columns="auto 1fr"
         gap="small"
-        leftContent={<div className={styles.thumbnail}>{/* App Image */}</div>}
+        leftContent={<Thumbnail />}
         rightContent={
           <ItemStack className={styles.content}>
             <ItemHeader>
@@ -39,7 +40,7 @@ export function Card({ work }: CardProps) {
                   {highlights.map((highlight) => (
                     <li key={highlight}>
                       <CheckCircleIcon className={styles.highlightIcon} />
-                      {highlight}
+                      <span>{highlight}</span>
                     </li>
                   ))}
                 </ul>

@@ -1,0 +1,37 @@
+:root {
+  --color-wave-base: var(--color-main);
+  --color-wave-back: var(--color-blue-300);
+  --color-wave-front: var(--color-blue-500);
+}
+
+.root {
+  width: 100px;
+  height: 200px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+  background: var(--color-wave-base);
+  margin-top: 4px;
+}
+
+.waveBack,
+.waveFront {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  pointer-events: none;
+}
+
+.waveBack {
+  top: 45%;
+  height: 60%;
+  fill: var(--color-wave-back);
+  filter: blur(0.5px);
+}
+
+.waveFront {
+  top: 55%;
+  height: 60%;
+  fill: var(--color-wave-front);
+}
+
