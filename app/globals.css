@@ -8,8 +8,10 @@
   --color-highlight: rgba(2, 101, 218, 0.06);
   --color-highlight-strong: rgba(2, 101, 218, 0.1);
 
+  --color-blue-200: #4096f0;
   --color-blue-300: #69b8ff;
-  --color-blue-400: #a9dbff;
+  --color-blue-400: #7fbff9;
+  --color-blue-500: #a9dbff;
 }
 
 body {

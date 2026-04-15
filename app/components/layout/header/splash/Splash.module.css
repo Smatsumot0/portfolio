@@ -1,7 +1,7 @@
 :root {
   --drop-blue: var(--color-main);
   --drop-light: var(--color-blue-300);
-  --drop-pale: var(--color-blue-400);
+  --drop-pale: var(--color-blue-500);
 }
 
 .splash {
