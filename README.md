@@ -1,36 +1,111 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Portfolio
 
-## Getting Started
+## 🔗 URL
 
-First, run the development server:
+Coming soon...
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+---
+
+## 🧑‍💻 About
+
+フロントエンドを中心に開発しているエンジニアです。
+React / Next.js を用いたWebアプリケーション開発を得意としています。
+
+バックエンド（NestJS / Prisma）も含めたフルスタック開発経験があります。
+
+---
+
+## 🎯 このポートフォリオについて
+
+本ポートフォリオは、これまでの経験・スキル・制作物をまとめたものです。
+「シンプルで見やすく、直感的に理解できるUI」を意識して設計しています。
+
+---
+
+## 🧩 コンテンツ
+
+- About（自己紹介）
+- Timeline（職歴）
+- Works（制作物）
+- Contact
+
+---
+
+## 🛠 技術スタック
+
+### Frontend
+
+- Next.js (App Router)
+- React
+- TypeScript
+
+### Styling
+
+- CSS Modules
+- Design Tokens
+
+### その他
+
+- ESLint
+- Prettier
+
+---
+
+## 💡 こだわりポイント
+
+- feature単位でのコンポーネント分割による責務の明確化
+- 再利用性を意識したUI設計（ui / layout の分離）
+- Design Tokenによるスタイル管理とテーマ分離
+- Server / Client Componentの責務を意識した構成
+- クライアントコンポーネントを最小限に抑えた設計
+
+---
+
+## 📸 スクリーンショット
+
+![top](./docs/top.png)
+
+---
+
+## 🏗 ディレクトリ構成
+
+```plaintext
+app/
+  components/
+    layout/     # レイアウト系コンポーネント
+    ui/         # 汎用UIコンポーネント
+    features/   # 機能単位のコンポーネント
+  globals.css
+  layout.tsx
+  page.tsx
+  icon.png
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🧠 設計意図
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- App Router構成に準拠し、`app/`配下に集約
+- `components`は責務ごとに分割（layout / ui / features）
+- feature単位で分離することで拡張性を確保
+- UIは再利用可能な粒度で設計
+- グローバルスタイルとコンポーネントスタイルを分離
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## 🚧 今後の改善
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- アニメーションの強化
+- パフォーマンス最適化
+- アクセシビリティ向上
+- スマホ向け最適化
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## 🧑‍💻 セットアップ
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```bash
+pnpm install
+pnpm dev
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
