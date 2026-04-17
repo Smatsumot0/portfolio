@@ -1,84 +1,42 @@
 "use client"
 
-import { useEffect, useRef, useState } from "react"
-import styles from "./CopyButton.module.css"
 import { Button } from "../button/Button"
+import { useToast } from "../toast"
 
 export type CopyButtonProps = {
   value: string
   label?: string
-  copiedLabel?: string
+  copiedMessage?: string
+  errorMessage?: string
   className?: string
   onCopy?: () => void
-}
-
-async function copyToClipboard(text: string) {
-  if (navigator.clipboard?.writeText) {
-    await navigator.clipboard.writeText(text)
-    return
-  }
-
-  const textarea = document.createElement("textarea")
-  textarea.value = text
-  textarea.style.position = "fixed"
-  textarea.style.opacity = "0"
-  textarea.style.pointerEvents = "none"
-  document.body.appendChild(textarea)
-  textarea.focus()
-  textarea.select()
-  document.body.removeChild(textarea)
 }
 
 export function CopyButton({
   value,
   label = "コピーする",
-  copiedLabel = "コピーしました",
+  copiedMessage = "コピーしました",
+  errorMessage = "コピーに失敗しました",
   className,
   onCopy,
 }: CopyButtonProps) {
-  const [copied, setCopied] = useState(false)
-  const timeoutRef = useRef<number | null>(null)
-
-  useEffect(() => {
-    return () => {
-      if (timeoutRef.current !== null) {
-        window.clearTimeout(timeoutRef.current)
-      }
-    }
-  }, [])
+  const { showToast } = useToast()
 
   async function handleClick() {
     try {
-      await copyToClipboard(value)
-      setCopied(true)
+      await navigator.clipboard.writeText(value)
       onCopy?.()
-
-      if (timeoutRef.current !== null) {
-        window.clearTimeout(timeoutRef.current)
-      }
-
-      timeoutRef.current = window.setTimeout(() => {
-        setCopied(false)
-      }, 2000)
+      showToast(copiedMessage, { type: "success" })
     } catch (error) {
       console.error("Failed to copy text:", error)
+      showToast(errorMessage, { type: "error" })
     }
   }
 
   return (
-    <div className={styles.root}>
-      <Button
-        className={`${styles.button} ${className ?? ""}`}
-        onClick={handleClick}>
-        {label}
-      </Button>
-
-      <p
-        className={`${styles.feedback} ${copied ? styles.feedbackVisible : ""}`}
-        aria-live="polite">
-        {copiedLabel}
-      </p>
-    </div>
+    <Button className={className} onClick={handleClick}>
+      {label}
+    </Button>
   )
 }
 
