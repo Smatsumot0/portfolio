@@ -5,4 +5,5 @@ export * from "./link/Link"
 export * from "./qrcode/QrCode"
 export * from "./title/Title"
 export * from "./tech-stack/TechStack"
+export * from "./toast"
 
