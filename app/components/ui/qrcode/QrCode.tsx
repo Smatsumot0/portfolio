@@ -34,7 +34,7 @@ export function QrCode({
   const { imageUrl } = useQrCode(value, { pixelSize })
 
   return (
-    <div className={clsx(styles.root, className)}>
+    <div className={clsx(styles.root, styles[size], className)}>
       <p className={styles.title}>{title}</p>
 
       {imageUrl ? (
