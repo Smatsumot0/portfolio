@@ -1,0 +1,63 @@
+:root {
+  --color-toast-success: rgba(40, 100, 200, 0.8);
+  --color-toast-error: rgba(140, 60, 80, 0.8);
+}
+
+.root {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 1000;
+
+  padding: 12px 16px;
+  border-radius: 8px;
+
+  color: white;
+  font-size: 0.9rem;
+  font-weight: 600;
+
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  opacity: 0;
+  transform: translateY(8px);
+  pointer-events: none;
+
+  animation: toast 2.2s ease forwards;
+}
+
+.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* アニメーション */
+@keyframes toast {
+  0% {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  10% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  80% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+}
+
+/* ===== 成功／エラー =====*/
+.success {
+  background: var(--color-toast-success);
+}
+
+.error {
+  background: var(--color-toast-error);
+}
+
