@@ -1,7 +1,6 @@
 .root {
   display: grid;
   justify-items: center;
-  gap: 12px;
   background: white;
 }
 
@@ -27,15 +26,18 @@
 .small {
   padding: 4px;
   border-radius: 4px;
+  gap: 8px;
 }
 
 .medium {
   padding: 8px;
   border-radius: 8px;
+  gap: 12px;
 }
 
 .large {
   padding: 16px;
   border-radius: 16px;
+  gap: 16px;
 }
 

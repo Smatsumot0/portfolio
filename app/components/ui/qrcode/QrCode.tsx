@@ -6,8 +6,8 @@ import clsx from "clsx"
 import { useQrCode } from "./useQrCode"
 
 const sizeMap = {
-  small: 100,
-  medium: 140,
+  small: 80,
+  medium: 120,
   large: 180,
 } as const
 

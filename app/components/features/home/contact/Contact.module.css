@@ -1,0 +1,41 @@
+/* ===== 左：コンテンツ ===== */
+.content {
+  display: grid;
+  gap: 4px;
+}
+
+.list {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+}
+
+.term {
+  color: var(--color-main);
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.email {
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* ===== 右：QRコード ===== */
+.qrArea {
+  display: none;
+}
+
+/* PC向けのみ表示 */
+@media (min-width: 1024px) {
+  .qrArea {
+    display: block;
+  }
+}
+

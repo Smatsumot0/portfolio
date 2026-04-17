@@ -5,6 +5,7 @@ import { Timeline } from "@/app/components/features/home/timeline/Timeline"
 import { Works } from "@/app/components/features/home/works/Works"
 import { TwoColumn } from "@/app/components/layout"
 import styles from "./Home.module.css"
+import { Contact } from "@/app/components/features/home/contact/Contact"
 
 export function Home() {
   return (
@@ -18,8 +19,8 @@ export function Home() {
           columns="1fr 1.18fr"
           gap="large"
         />
+        <Contact />
       </SectionGroup>
-      {/* CONTACT */}
     </div>
   )
 }
