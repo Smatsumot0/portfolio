@@ -2,5 +2,6 @@
   display: grid;
   grid-template-columns: var(--columns);
   gap: var(--gap);
+  align-items: start;
 }
 
