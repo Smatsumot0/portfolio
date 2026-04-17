@@ -64,7 +64,7 @@ export function Card({ work }: CardProps) {
                       <li key={button.label}>
                         <Link
                           href={button.url}
-                          variant="button"
+                          appearance="button"
                           kind="anchor"
                           target="_blank"
                           rel="noopener noreferrer">

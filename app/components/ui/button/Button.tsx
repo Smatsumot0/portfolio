@@ -1,11 +1,10 @@
-import styles from "./Button.module.css"
 import buttonLikeStyle from "../button-like/button-like.module.css"
 import clsx from "clsx"
 
 export type ButtonProps = {
-  children: React.ReactNode
+  children?: React.ReactNode
   type?: "button" | "submit" | "reset"
-  variant?: "primary" | "secondary"
+  tone?: "primary" | "secondary"
   size?: "small" | "medium" | "large"
   onClick?: () => void
   disabled?: boolean
@@ -15,7 +14,7 @@ export type ButtonProps = {
 export function Button({
   children,
   type = "button",
-  variant = "primary",
+  tone = "primary",
   size = "medium",
   onClick,
   disabled,
@@ -26,7 +25,7 @@ export function Button({
       className={clsx(
         buttonLikeStyle.buttonLike,
         buttonLikeStyle[size],
-        styles[variant],
+        buttonLikeStyle[tone],
         className,
       )}
       type={type}

@@ -2,6 +2,7 @@ import NextLink from "next/link"
 import clsx from "clsx"
 import style from "./Link.module.css"
 import buttonLikeStyle from "../button-like/button-like.module.css"
+import { ButtonProps } from "@/app/components/ui/button/Button"
 
 type BaseProps = {
   href: string
@@ -13,13 +14,13 @@ type BaseProps = {
 }
 
 type TextLinkProps = {
-  variant?: "text"
+  appearance?: "text"
 } & BaseProps
 
 type ButtonLinkProps = {
-  variant: "button"
-  size?: "small" | "medium" | "large"
-} & BaseProps
+  appearance: "button"
+} & BaseProps &
+  Pick<ButtonProps, "size" | "tone">
 
 type LinkProps = TextLinkProps | ButtonLinkProps
 
@@ -34,10 +35,11 @@ export function Link({
 }: LinkProps) {
   const linkClassName = clsx(
     style.link,
-    variantProps.variant === "button"
+    variantProps.appearance === "button"
       ? [
           buttonLikeStyle.buttonLike,
           buttonLikeStyle[variantProps.size ?? "medium"],
+          buttonLikeStyle[variantProps.tone ?? "primary"],
         ]
       : style.text,
     className,

@@ -1,12 +1,12 @@
 .buttonLike {
-  display: flex;
+  display: inline-flex;
   justify-content: center;
-  cursor: pointer;
-  background: var(--color-main);
-  color: white;
-  border: thin solid var(--color-main);
+  align-items: center;
+
+  border: 2px solid var(--color-main);
   border-radius: 4px;
   line-height: 1;
+  cursor: pointer;
 }
 
 .buttonLike:hover {
@@ -26,5 +26,16 @@
 .large {
   padding: 12px 20px;
   font-size: 1.25rem;
+}
+
+/*===== トーン =====*/
+.primary {
+  background: var(--color-main);
+  color: white;
+}
+
+.secondary {
+  background: transparent;
+  color: var(--color-main);
 }
 
