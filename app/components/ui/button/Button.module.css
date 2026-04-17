@@ -3,20 +3,3 @@
   background: transparent;
   color: var(--color-main);
 }
-
-/* size */
-.small {
-  padding: 6px 12px;
-  font-size: 0.85rem;
-}
-
-.medium {
-  padding: 8px 16px;
-  font-size: 1rem;
-}
-
-.large {
-  padding: 12px 20px;
-  font-size: 1.25rem;
-}
-

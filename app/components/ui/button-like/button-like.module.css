@@ -6,9 +6,25 @@
   color: white;
   border: thin solid var(--color-main);
   border-radius: 4px;
-  padding: 8px;
+  line-height: 1;
 }
 
 .buttonLike:hover {
+}
+
+/*===== サイズ =====*/
+.small {
+  padding: 6px 12px;
+  font-size: 0.85rem;
+}
+
+.medium {
+  padding: 8px 16px;
+  font-size: 1rem;
+}
+
+.large {
+  padding: 12px 20px;
+  font-size: 1.25rem;
 }
 

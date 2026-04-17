@@ -1,6 +1,6 @@
-import clsx from "clsx"
-import style from "./Button.module.css"
+import styles from "./Button.module.css"
 import buttonLikeStyle from "../button-like/button-like.module.css"
+import clsx from "clsx"
 
 export type ButtonProps = {
   children: React.ReactNode
@@ -25,9 +25,8 @@ export function Button({
     <button
       className={clsx(
         buttonLikeStyle.buttonLike,
-        style.button,
-        style[variant],
-        style[size],
+        buttonLikeStyle[size],
+        styles[variant],
         className,
       )}
       type={type}

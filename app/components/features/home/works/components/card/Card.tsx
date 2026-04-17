@@ -19,6 +19,13 @@ export type CardProps = {
 
 export function Card({ work }: CardProps) {
   const { title, description, highlights, techStack, appUrl, githubUrl } = work
+  const buttons = [
+    appUrl ? { label: "View App", url: appUrl } : null,
+    githubUrl ? { label: "GitHub", url: githubUrl } : null,
+  ].filter(
+    (button): button is { label: string; url: string } => button !== null,
+  )
+
   return (
     <StackItem className={styles.root}>
       <TwoColumn
@@ -53,16 +60,18 @@ export function Card({ work }: CardProps) {
               <ItemSection>
                 <nav aria-label={`${title} links`}>
                   <ul className={styles.links}>
-                    <li>
-                      <Link href={appUrl} variant="button">
-                        View App
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href={githubUrl} variant="button">
-                        GitHub
-                      </Link>
-                    </li>
+                    {buttons.map((button) => (
+                      <li key={button.label}>
+                        <Link
+                          href={button.url}
+                          variant="button"
+                          kind="anchor"
+                          target="_blank"
+                          rel="noopener noreferrer">
+                          {button.label}
+                        </Link>
+                      </li>
+                    ))}
                   </ul>
                 </nav>
               </ItemSection>
