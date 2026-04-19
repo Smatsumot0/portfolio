@@ -3,19 +3,31 @@ import { TimelineCompany } from "../../types"
 import { ProjectItem } from "../project-item/ProjectItem"
 import { StackItem, TwoColumn } from "@/app/components/layout"
 import { ItemStack, ItemHeader } from "@/app/components/ui"
+import { formatYM } from "@/app/lib/date"
 
 type CompanyProps = {
   company: TimelineCompany
 }
 
-function formatYM(date: string) {
-  const [year, month] = date.split("-")
-  return `${year}/${Number(month)}`
-}
-
 export function Company({ company }: CompanyProps) {
   const { companyName, period, projects } = company
   const joinedYear = period.from.split("-")[0]
+  const sortedProjects = [...projects].sort((a, b) => {
+    const aFrom = a.period?.from
+    const bFrom = b.period?.from
+
+    // 両方ない → 順序そのまま
+    if (!aFrom && !bFrom) return 0
+
+    // aだけない → aを後ろへ
+    if (!aFrom) return 1
+
+    // bだけない → bを後ろへ
+    if (!bFrom) return -1
+
+    // 両方ある → 新しい順
+    return bFrom.localeCompare(aFrom)
+  })
 
   return (
     <StackItem className={styles.root}>
@@ -39,7 +51,7 @@ export function Company({ company }: CompanyProps) {
             </ItemHeader>
 
             <ul className={styles.projectList}>
-              {projects.map((project) => (
+              {sortedProjects.map((project) => (
                 <ProjectItem key={project.id} project={project} />
               ))}
             </ul>

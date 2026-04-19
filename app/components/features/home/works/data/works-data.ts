@@ -19,9 +19,9 @@ export const worksData: Work[] = [
       "Prisma",
       "PostgreSQL",
     ],
-    appUrl: "#",
-    githubUrl: "#",
-    thumbnailUrl: "#",
+    appUrl: "",
+    githubUrl: "https://github.com/Smatsumot0/lunimo",
+    thumbnailUrl: "",
   },
 ]
 

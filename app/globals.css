@@ -4,6 +4,9 @@
 
   --color-main: #0265da;
 
+  --color-text-primary: #3f4552;
+  --color-text-secondary: #5b6b8c;
+
   --color-highlight-soft: rgba(2, 101, 218, 0.04);
   --color-highlight: rgba(2, 101, 218, 0.06);
   --color-highlight-strong: rgba(2, 101, 218, 0.1);
@@ -18,7 +21,7 @@ body {
   margin: 0;
   font-family: system-ui, sans-serif;
   background: #f6f7f9;
-  color: #3f4552;
+  color: var(--color-text-primary);
 }
 
 *,

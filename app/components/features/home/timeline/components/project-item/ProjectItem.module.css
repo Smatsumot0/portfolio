@@ -1,13 +1,40 @@
 .header {
   display: flex;
-  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .title {
   font-weight: normal;
 }
 
+.period {
+  font-size: 0.9rem;
+  margin: 0;
+}
+
 .description {
   margin: 0;
+}
+
+.highlights {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  display: inline-flex;
+  flex-wrap: wrap;
+
+  font-size: 0.9rem;
+}
+
+.highlights > li::after {
+  content: "/";
+  margin-inline: 8px;
+  color: var(--color-text-secondary);
+}
+
+.highlights > li:last-child:after {
+  display: none;
 }
 
