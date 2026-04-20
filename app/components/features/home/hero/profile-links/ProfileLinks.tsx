@@ -17,7 +17,11 @@ export function ProfileLinks() {
     <ul className={style.links}>
       {links.map((link) => (
         <li key={link.title}>
-          <Link href={link.href} variant="button" className={style.profileLink}>
+          <Link
+            href={link.href}
+            kind="anchor"
+            appearance="button"
+            className={style.profileLink}>
             {link.title}
           </Link>
         </li>

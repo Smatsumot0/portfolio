@@ -1,0 +1,70 @@
+.waveLayer {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.wave {
+  position: absolute;
+  left: 0;
+  width: 110%;
+  height: 100%;
+  display: block;
+}
+
+.wave path {
+  fill: currentColor;
+}
+
+.waveFront {
+  color: var(--color-wave-front);
+  bottom: 0;
+  animation: waveFloatFront 8s ease-in-out infinite alternate;
+}
+
+.waveBack {
+  color: var(--color-wave-back);
+  bottom: -10px;
+  animation: waveFloatBack 12s ease-in-out infinite alternate;
+}
+
+.waveBase {
+  color: var(--color-wave-base);
+  bottom: -20px;
+  animation: waveFloatBase 16s ease-in-out infinite alternate;
+}
+
+.inner {
+  position: relative;
+  z-index: 1;
+  padding: var(--space-10) var(--space-5) var(--space-7);
+}
+
+/* 揺れはかなり弱め */
+@keyframes waveFloatFront {
+  from {
+    transform: translateX(-8px) translateY(0);
+  }
+  to {
+    transform: translateX(8px) translateY(4px);
+  }
+}
+
+@keyframes waveFloatBack {
+  from {
+    transform: translateX(10px) translateY(0);
+  }
+  to {
+    transform: translateX(-10px) translateY(6px);
+  }
+}
+
+@keyframes waveFloatBase {
+  from {
+    transform: translateX(-6px) translateY(0);
+  }
+  to {
+    transform: translateX(6px) translateY(5px);
+  }
+}
+

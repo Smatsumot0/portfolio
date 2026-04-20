@@ -16,12 +16,14 @@ export function Contact() {
       <Stack as="div">
         <StackItem as="div" className={styles.stackItem}>
           <TwoColumn
+            className={styles.twoColumn}
             leftContent={
               <div className={styles.content}>
                 <dl className={styles.list}>
                   <dt className={styles.term}>メールアドレス</dt>
                   <dd className={styles.email}>{EMAIL_ADDRESS}</dd>
                 </dl>
+                <p>ご相談・カジュアル面談などお気軽にご連絡ください。</p>
                 <div className={styles.actions}>
                   <CopyButton value={EMAIL_ADDRESS} />
                   <Link href={mailtoHref} appearance="button" tone="secondary">

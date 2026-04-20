@@ -4,3 +4,9 @@
   gap: var(--gap);
 }
 
+/* デフォルト：レスポンシブ（1列化する） */
+@media (max-width: 1024px) {
+  .responsive {
+    grid-template-columns: 1fr;
+  }
+}

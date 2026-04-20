@@ -34,6 +34,7 @@ export function Company({ company }: CompanyProps) {
       <TwoColumn
         columns="auto 1fr"
         gap="small"
+        responsive={false}
         leftContent={
           <div className={styles.lineArea}>
             <span className={styles.year}>{joinedYear}</span>

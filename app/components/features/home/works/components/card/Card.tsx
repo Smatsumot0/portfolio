@@ -31,6 +31,7 @@ export function Card({ work }: CardProps) {
       <TwoColumn
         columns="auto 1fr"
         gap="small"
+        responsive={false}
         leftContent={<Thumbnail />}
         rightContent={
           <ItemStack className={styles.content}>

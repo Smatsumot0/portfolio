@@ -1,15 +1,15 @@
 .techList {
   display: flex;
   flex-wrap: wrap;
-  gap: 4px;
+  gap: var(--space-1);
   list-style: none;
   padding: 0;
 }
 
 .techItem {
-  padding: 4px 10px;
+  padding: var(--space-1) 10px;
   border: thin solid var(--color-main);
-  border-radius: 999px;
+  border-radius: var(--radius-full);
   font-size: 0.7rem;
 }
 

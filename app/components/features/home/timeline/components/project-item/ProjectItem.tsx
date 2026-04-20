@@ -3,7 +3,6 @@ import styles from "./ProjectItem.module.css"
 import { TimelineProject } from "../../types"
 import { ItemSection } from "@/app/components/ui/item/ItemSection"
 import { formatYM } from "@/app/lib/date"
-import clsx from "clsx"
 
 type ProjectItemProps = {
   project: TimelineProject

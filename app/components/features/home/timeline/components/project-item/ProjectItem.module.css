@@ -30,7 +30,7 @@
 
 .highlights > li::after {
   content: "/";
-  margin-inline: 8px;
+  margin-inline: var(--space-2);
   color: var(--color-text-secondary);
 }
 

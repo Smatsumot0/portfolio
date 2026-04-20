@@ -20,6 +20,7 @@ export function Splash() {
 
   const base = 0.005 // 最小移動量
   const scale = 0.03 // 距離に応じた増加量
+  const baseDelay = 0.15 // 一瞬間を作る
 
   return (
     <div className={styles.splash} aria-hidden="true">
@@ -39,7 +40,8 @@ export function Splash() {
         const startYRatio = drop.yRatio + yOffset
 
         // ドロップのサイズと位置に基づいて、アニメーションの遅延と持続時間を計算
-        const delay = Math.pow(distance, 1.2) * 0.1 + sizeRatio * 0.1
+        const delay =
+          baseDelay + Math.pow(distance, 1.2) * 0.12 + sizeRatio * 0.08
         const duration = 0.5 + distance * 0.2 + sizeRatio * 0.1
 
         const style: DropStyle = {

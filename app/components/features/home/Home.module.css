@@ -1,6 +1,5 @@
 .home {
-  width: var(--width-content);
   display: grid;
-  gap: 32px;
+  gap: var(--space-6);
 }
 

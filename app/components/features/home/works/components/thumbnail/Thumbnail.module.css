@@ -1,17 +1,11 @@
-:root {
-  --color-wave-base: var(--color-main);
-  --color-wave-back: var(--color-blue-300);
-  --color-wave-front: var(--color-blue-500);
-}
-
 .root {
   width: 100px;
   height: 200px;
   position: relative;
   overflow: hidden;
-  border-radius: 16px;
+  border-radius: var(--radius-lg);
   background: var(--color-wave-base);
-  margin-top: 4px;
+  margin-top: var(--space-1);
 }
 
 .waveBack,

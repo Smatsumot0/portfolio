@@ -6,10 +6,11 @@ import { Works } from "@/app/components/features/home/works/Works"
 import { TwoColumn } from "@/app/components/layout"
 import styles from "./Home.module.css"
 import { Contact } from "@/app/components/features/home/contact/Contact"
+import clsx from "clsx"
 
 export function Home() {
   return (
-    <div className={styles.home}>
+    <div className={clsx("container", styles.home)}>
       <Hero />
       <SectionGroup>
         <About />

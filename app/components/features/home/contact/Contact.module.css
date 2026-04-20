@@ -1,12 +1,16 @@
+.twoColumn {
+  align-items: flex-start;
+}
+
 /* ===== 左：コンテンツ ===== */
 .content {
   display: grid;
-  gap: 4px;
+  gap: var(--space-1);
 }
 
 .list {
   display: grid;
-  gap: 8px;
+  gap: var(--space-2);
   margin: 0;
 }
 
@@ -24,7 +28,7 @@
 .actions {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: var(--space-2);
 }
 
 /* ===== 右：QRコード ===== */

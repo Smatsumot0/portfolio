@@ -7,24 +7,32 @@ export function About() {
       <Stack as="div">
         <StackItem as="div" className={styles.stackItem}>
           <p className={styles.lead}>
-            フロントエンドエンジニアとして約2年、フルスタックエンジニアとして約4年の開発経験があります。
+            ユーザー体験を意識したフロントエンド設計と、
+            <span className={styles.break} />
+            バックエンドまで含めた一貫した開発ができるエンジニアです。
           </p>
           <p>
-            現在は<strong>React / Next.js</strong>
-            を中心に、ユーザー体験を意識したWebアプリケーション開発を行っています。
+            <strong>React / Next.js</strong>
+            を中心に、使いやすさと保守性を両立した
+            <span className={styles.break} />
+            Webアプリケーション開発を行っています。
           </p>
           <p>
             フロントエンドからバックエンドまで一貫して開発できることや、
-            <br />
+            <span className={styles.break} />
             <strong>TypeScript</strong>による型安全な設計を強みとしています。
           </p>
           <p>
-            個人開発として生理周期管理アプリ<strong>Lunimo</strong>
-            を開発しており、
-            <br />
-            設計力やUI/UXの改善にも取り組んでいます。
+            フロントエンドだけでなくAPI設計やデータ設計まで関わることで、
+            <span className={styles.break} />
+            全体最適な実装ができる点を強みとしています。
           </p>
-          <p>シンプルで使いやすいUI設計を大切にしています。</p>
+
+          <p>
+            現在は個人開発として、日常の課題をシンプルに解決する
+            <span className={styles.break} />
+            アプリケーションの開発に取り組んでいます。
+          </p>
         </StackItem>
       </Stack>
     </Section>

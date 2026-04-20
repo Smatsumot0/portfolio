@@ -21,7 +21,7 @@
     color-mix(in srgb, var(--drop-color) 70%, var(--color-main) 30%);
   background: var(--drop-color);
   filter: blur(0.5px);
-  border-radius: 999px;
+  border-radius: var(--radius-full);
   left: var(--end-x);
   top: var(--end-y);
   transform: translate(-50%, -50%) scale(1);

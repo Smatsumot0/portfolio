@@ -7,24 +7,35 @@
 
 .about p {
   margin-inline: 0;
-  margin-block: 0 16px;
+  margin-block: 0 var(--space-4);
   line-height: 1.9;
-  width: var(--width-text);
+  max-width: var(--max-width-text);
 }
 
 .about p:has(br) {
-  margin-bottom: 24px;
+  margin-bottom: var(--space-5);
 }
 
 .about strong {
   font-weight: 600;
   color: var(--color-main);
-  margin-inline: 8px;
+  margin-inline: var(--space-2);
 }
 
 .about p.lead {
   font-size: 1.05rem;
   font-weight: 500;
-  margin-bottom: 24px;
+  margin-bottom: var(--space-5);
+}
+
+@media (min-width: 768px) {
+  .break {
+    display: inline;
+  }
+
+  .break::after {
+    content: "\A";
+    white-space: pre;
+  }
 }
 

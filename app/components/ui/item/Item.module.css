@@ -1,16 +1,16 @@
 .stack {
-  padding: 8px 24px 16px;
+  padding: var(--space-2) var(--space-5) var(--space-4);
   display: grid;
-  gap: 48px;
+  gap: var(--space-7);
 }
 
 .content {
   display: grid;
-  gap: 24px;
+  gap: var(--space-5);
 }
 
 .section {
   display: grid;
-  gap: 16px;
+  gap: var(--space-4);
 }
 
