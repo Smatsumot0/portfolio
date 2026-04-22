@@ -12,13 +12,22 @@ import styles from "./Card.module.css"
 import { CheckCircleIcon } from "@/app/components/ui/icon"
 import { StackItem, TwoColumn } from "@/app/components/layout"
 import { Thumbnail } from "../thumbnail/Thumbnail"
+import { Badge } from "../badge/Badge"
 
 export type CardProps = {
   work: Work
 }
 
 export function Card({ work }: CardProps) {
-  const { title, description, highlights, techStack, appUrl, githubUrl } = work
+  const {
+    title,
+    description,
+    highlights,
+    techStack,
+    appUrl,
+    githubUrl,
+    status,
+  } = work
   const buttons = [
     appUrl ? { label: "View App", url: appUrl } : null,
     githubUrl ? { label: "GitHub", url: githubUrl } : null,
@@ -32,7 +41,12 @@ export function Card({ work }: CardProps) {
         columns="auto 1fr"
         gap="small"
         responsive={false}
-        leftContent={<Thumbnail />}
+        leftContent={
+          <div className={styles.media}>
+            <Thumbnail />
+            <Badge status={status} />
+          </div>
+        }
         rightContent={
           <ItemStack className={styles.content}>
             <ItemHeader>

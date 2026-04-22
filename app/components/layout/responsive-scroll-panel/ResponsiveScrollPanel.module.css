@@ -4,6 +4,7 @@
 @media (min-width: 1024px) {
   .panel {
     max-height: var(--max-height-scroll-panel-override);
+    padding-inline: var(--space-1);
     overflow-y: auto;
     scrollbar-width: thin;
     scrollbar-color: color-mix(in srgb, var(--color-main) 20%, transparent)
