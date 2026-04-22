@@ -1,3 +1,5 @@
+@import "./animation.css";
+
 :root {
   --width-content-max: 1120px;
 
@@ -5,10 +7,14 @@
 
   --height-header: 180px;
   --height-footer: 100px;
+  --height-navigation: 90px;
+
+  --max-height-scroll-panel: min(72vh, 920px);
 
   --gutter: clamp(16px, 4vw, 32px);
 
   --color-main: #0265da;
+  --color-base: #f6f7f9;
 
   --color-text-primary: #3f4552;
   --color-text-secondary: #5b6b8c;
@@ -45,10 +51,14 @@
   --space-10: 160px;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   font-family: system-ui, sans-serif;
-  background: #f6f7f9;
+  background: var(--color-base);
   color: var(--color-text-primary);
 }
 
@@ -68,5 +78,29 @@ body {
 .container {
   width: min(calc(100% - var(--gutter) * 2), var(--width-content-max));
   margin-inline: auto;
+}
+
+@media (min-width: 768px) {
+  .is-grow {
+    animation: grow 0.8s ease-out;
+  }
+}
+
+@keyframes grow {
+  0% {
+    box-shadow: none;
+    background: transparent;
+  }
+  50% {
+    box-shadow:
+      0 0 0 1px var(--color-highlight),
+      0 0 12px var(--color-highlight),
+      0 0 24px var(--color-highlight-strong);
+    background: var(--color-highlight-soft);
+  }
+  100% {
+    box-shadow: none;
+    background: transparent;
+  }
 }
 

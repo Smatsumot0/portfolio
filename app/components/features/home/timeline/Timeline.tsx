@@ -1,4 +1,4 @@
-import { Section, Stack } from "@/app/components/layout"
+import { ResponsiveScrollPanel, Section, Stack } from "@/app/components/layout"
 import { timelineData } from "./data/timeline-data"
 import { Company } from "./components"
 
@@ -8,12 +8,14 @@ export function Timeline() {
   )
 
   return (
-    <Section title="Timeline">
-      <Stack>
-        {sorted.map((company) => (
-          <Company company={company} key={company.id} />
-        ))}
-      </Stack>
+    <Section title="timeline">
+      <ResponsiveScrollPanel maxHeight="var(--max-height-scroll-panel">
+        <Stack>
+          {sorted.map((company) => (
+            <Company company={company} key={company.id} />
+          ))}
+        </Stack>
+      </ResponsiveScrollPanel>
     </Section>
   )
 }

@@ -12,7 +12,7 @@ export function Contact() {
   const mailtoHref = `mailto:${EMAIL_ADDRESS}?${params.toString()}`
 
   return (
-    <Section title="Contact">
+    <Section title="contact">
       <Stack as="div">
         <StackItem as="div" className={styles.stackItem}>
           <TwoColumn

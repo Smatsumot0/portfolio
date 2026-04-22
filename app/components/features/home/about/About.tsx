@@ -3,7 +3,7 @@ import styles from "./About.module.css"
 
 export function About() {
   return (
-    <Section title="About" className={styles.about}>
+    <Section title="about" className={styles.about}>
       <Stack as="div">
         <StackItem as="div" className={styles.stackItem}>
           <p className={styles.lead}>

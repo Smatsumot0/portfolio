@@ -1,15 +1,17 @@
 import { Card } from "./components"
 import { worksData } from "./data/works-data"
-import { Section, Stack } from "@/app/components/layout"
+import { ResponsiveScrollPanel, Section, Stack } from "@/app/components/layout"
 
 export function Works() {
   return (
-    <Section title="Works">
-      <Stack>
-        {worksData.map((work) => (
-          <Card work={work} key={work.id} />
-        ))}
-      </Stack>
+    <Section title="works">
+      <ResponsiveScrollPanel maxHeight="var(--max-height-scroll-panel">
+        <Stack>
+          {worksData.map((work) => (
+            <Card work={work} key={work.id} />
+          ))}
+        </Stack>
+      </ResponsiveScrollPanel>
     </Section>
   )
 }

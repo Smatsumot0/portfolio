@@ -1,30 +1,22 @@
+@import "../../../styles/animation.css";
+
 .section {
   position: relative;
   border-radius: var(--radius-lg);
   padding: var(--space-5) var(--space-4);
+  scroll-margin-top: var(--height-navigation);
+}
+
+body[data-section="about"] #about,
+body[data-section="timeline"] #timeline,
+body[data-section="works"] #works,
+body[data-section="contact"] #contact {
+  background: var(--color-highlight-soft);
 }
 
 @media (hover: hover) {
   .section:hover {
     animation: grow 0.8s ease-out;
-  }
-}
-
-@keyframes grow {
-  0% {
-    box-shadow: none;
-    background: transparent;
-  }
-  50% {
-    box-shadow:
-      0 0 0 1px var(--color-highlight),
-      0 0 12px var(--color-highlight),
-      0 0 24px var(--color-highlight-strong);
-    background: var(--color-highlight-soft);
-  }
-  100% {
-    box-shadow: none;
-    background: transparent;
   }
 }
 

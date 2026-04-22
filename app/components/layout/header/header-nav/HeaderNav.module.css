@@ -1,0 +1,7 @@
+.link {
+  margin-left: 2rem;
+  font-weight: 600;
+  color: var(--color-main);
+  cursor: pointer;
+}
+

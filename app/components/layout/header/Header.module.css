@@ -1,22 +1,21 @@
 .header {
   position: relative;
   height: var(--height-header);
-  padding: var(--space-4) var(--space-6);
 }
 
 .navigation {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0;
-  position: relative;
+
+  height: var(--height-navigation);
+  position: fixed;
   z-index: 1;
+  padding: var(--space-4) var(--space-6);
+  background: var(--color-base);
 }
 
-.navigation nav a {
-  margin-left: 2rem;
-  color: var(--color-main);
-  font-weight: 600;
+.logo {
   cursor: pointer;
 }
 
