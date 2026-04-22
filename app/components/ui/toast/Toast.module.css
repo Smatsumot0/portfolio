@@ -5,7 +5,7 @@
 
 .root {
   position: fixed;
-  bottom: var(--space-5);
+  bottom: var(--height-footer);
   right: var(--space-5);
   z-index: 1000;
 
