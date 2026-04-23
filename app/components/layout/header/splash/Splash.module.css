@@ -49,3 +49,11 @@
   }
 }
 
+/*===== レスポンシブ =====*/
+/* スマホ以下 */
+@media (max-width: 768px) {
+  .splash {
+    height: var(--height-mobile-header);
+  }
+}
+

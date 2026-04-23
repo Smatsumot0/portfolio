@@ -11,11 +11,38 @@
   height: var(--height-navigation);
   position: fixed;
   z-index: 1;
-  padding: var(--space-4) var(--space-6);
+  padding: var(--space-4) var(--space-8);
   background: var(--color-base);
 }
 
 .logo {
+  position: relative;
+  height: 100%;
+  aspect-ratio: 1 / 1;
   cursor: pointer;
+}
+
+.logoImage {
+  object-fit: contain;
+}
+
+/*===== レスポンシブ =====*/
+/* タブレット以下 */
+@media (max-width: 1024px) {
+  .navigation {
+    padding-inline: var(--space-5);
+  }
+}
+
+/* スマホ以下 */
+@media (max-width: 768px) {
+  .header {
+    height: var(--height-mobile-header);
+  }
+
+  .navigation {
+    height: var(--height-mobile-navigation);
+    padding-inline: var(--space-4);
+  }
 }
 

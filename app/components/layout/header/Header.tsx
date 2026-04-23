@@ -20,7 +20,12 @@ export function Header() {
     <header className={clsx("content-width", style.header)}>
       <div className={clsx("content-width", style.navigation)}>
         <div className={style.logo} onClick={handleClickLogo}>
-          <Image src="/images/logo.svg" alt="logo" width={100} height={50} />
+          <Image
+            src="/images/logo.svg"
+            alt="logo"
+            fill
+            className={style.logoImage}
+          />
         </div>
         <HeaderNav />
       </div>

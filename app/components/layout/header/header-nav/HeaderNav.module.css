@@ -1,7 +1,135 @@
 .link {
-  margin-left: 2rem;
   font-weight: 600;
   color: var(--color-main);
   cursor: pointer;
+}
+
+.list {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/*===== PC =====*/
+.pcLink {
+  margin-left: 2rem;
+}
+
+.pcNav {
+  display: block;
+}
+
+/*===== スマホ =====*/
+.mobileNavWrapper {
+  display: none;
+}
+
+/* ハンバーガーメニュー */
+.menuButton {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.menuBar {
+  position: absolute;
+  display: block;
+  width: 22px;
+  height: 2px;
+
+  border-radius: 999px;
+  background: var(--color-main);
+  transition:
+    transform 0.24s ease,
+    opacity 0.2s ease,
+    width 0.2s ease;
+}
+
+.menuBar:nth-child(1) {
+  transform: translateY(-6px);
+}
+
+.menuBar:nth-child(2) {
+  transform: translateY(0);
+}
+
+.menuBar:nth-child(3) {
+  transform: translateY(6px);
+}
+
+.menuButtonOpen .menuBar:nth-child(1) {
+  transform: rotate(45deg);
+}
+
+.menuButtonOpen .menuBar:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0);
+}
+
+.menuButtonOpen .menuBar:nth-child(3) {
+  transform: rotate(-45deg);
+}
+
+/*===== レスポンシブ =====*/
+@media (max-width: 768px) {
+  .pcNav {
+    display: none;
+  }
+
+  .mobileNavWrapper {
+    display: block;
+    position: relative;
+  }
+
+  .mobileNav {
+    position: absolute;
+    top: calc(100% + 8px);
+    right: 0;
+    min-width: 160px;
+
+    border-radius: var(--radius-lg);
+    background: rgba(255, 255, 255, 0.96);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-8px);
+    transition:
+      opacity 0.2s ease,
+      transform 0.2s ease,
+      visibility 0.2s ease;
+  }
+
+  .mobileNavOpen {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  .mobileList {
+    margin: 0;
+    padding: var(--space-2) 0;
+    list-style: none;
+  }
+
+  .mobileLink {
+    display: flex;
+    justify-content: center;
+    align-items: "center";
+    padding-block: var(--space-3);
+  }
 }
 

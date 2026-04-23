@@ -6,12 +6,15 @@
   --max-width-text: 640px;
 
   --height-header: 180px;
-  --height-footer: 100px;
   --height-navigation: 90px;
+  --height-footer: 100px;
+
+  --height-mobile-header: 144px;
+  --height-mobile-navigation: 72px;
 
   --max-height-scroll-panel: min(72vh, 920px);
 
-  --gutter: clamp(12px, 2vw, 32px);
+  --gutter: clamp(8px, 2vw, 32px);
 
   --color-main: #0265da;
   --color-base: #f6f7f9;
@@ -49,6 +52,10 @@
   --space-8: 64px;
   --space-9: 96px;
   --space-10: 160px;
+
+  /* break point */
+  --break-point-tablet: 1024px;
+  --break-point-sp: 768px;
 }
 
 html {
