@@ -7,6 +7,18 @@ const gapMap = {
   large: "var(--space-6)",
 } as const
 
+const tabletGapMap = {
+  small: "var(--space-3)",
+  medium: "var(--space-4)",
+  large: "var(--space-5)",
+} as const
+
+const mobileGapMap = {
+  small: "var(--space-2)",
+  medium: "var(--space-3)",
+  large: "var(--space-4)",
+} as const
+
 export type TwoColumnLayout = {
   leftContent: React.ReactNode
   rightContent: React.ReactNode
@@ -19,6 +31,8 @@ export type TwoColumnLayout = {
 type CSSVars = {
   "--columns": string
   "--gap": string
+  "--gap-tablet": string
+  "--gap-mobile": string
 } & React.CSSProperties
 
 export function TwoColumn({
@@ -32,6 +46,8 @@ export function TwoColumn({
   const style: CSSVars = {
     "--columns": columns,
     "--gap": gapMap[gap],
+    "--gap-tablet": tabletGapMap[gap],
+    "--gap-mobile": mobileGapMap[gap],
   }
 
   return (

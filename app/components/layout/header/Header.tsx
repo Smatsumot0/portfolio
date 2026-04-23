@@ -17,8 +17,8 @@ export function Header() {
   }
 
   return (
-    <header className={clsx("container", style.header)}>
-      <div className={clsx("container", style.navigation)}>
+    <header className={clsx("content-width", style.header)}>
+      <div className={clsx("content-width", style.navigation)}>
         <div className={style.logo} onClick={handleClickLogo}>
           <Image src="/images/logo.svg" alt="logo" width={100} height={50} />
         </div>

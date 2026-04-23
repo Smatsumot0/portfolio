@@ -6,3 +6,16 @@
 .twoColumn {
   align-items: start;
 }
+
+@media (max-width: 768px) {
+  .home {
+    gap: var(--space-4);
+  }
+}
+
+@media (max-width: 480px) {
+  .home {
+    gap: var(--space-4);
+  }
+}
+

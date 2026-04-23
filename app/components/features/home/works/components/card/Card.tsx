@@ -5,7 +5,7 @@ import {
   Link,
   TechStack,
   Title,
-  ItemStack,
+  ItemBody,
 } from "@/app/components/ui"
 import { Work } from "../../types"
 import styles from "./Card.module.css"
@@ -48,7 +48,7 @@ export function Card({ work }: CardProps) {
           </div>
         }
         rightContent={
-          <ItemStack className={styles.content}>
+          <ItemBody className={styles.content}>
             <ItemHeader>
               <Title as="h3" variant="small" className={styles.title}>
                 {title}
@@ -91,7 +91,7 @@ export function Card({ work }: CardProps) {
                 </nav>
               </ItemSection>
             </ItemContent>
-          </ItemStack>
+          </ItemBody>
         }
       />
     </StackItem>

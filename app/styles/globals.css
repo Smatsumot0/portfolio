@@ -11,7 +11,7 @@
 
   --max-height-scroll-panel: min(72vh, 920px);
 
-  --gutter: clamp(16px, 4vw, 32px);
+  --gutter: clamp(12px, 2vw, 32px);
 
   --color-main: #0265da;
   --color-base: #f6f7f9;
@@ -75,7 +75,7 @@ body {
   width: 100%;
 }
 
-.container {
+.content-width {
   width: min(calc(100% - var(--gutter) * 2), var(--width-content-max));
   margin-inline: auto;
 }
@@ -83,24 +83,6 @@ body {
 @media (min-width: 768px) {
   .is-grow {
     animation: grow 0.8s ease-out;
-  }
-}
-
-@keyframes grow {
-  0% {
-    box-shadow: none;
-    background: transparent;
-  }
-  50% {
-    box-shadow:
-      0 0 0 1px var(--color-highlight),
-      0 0 12px var(--color-highlight),
-      0 0 24px var(--color-highlight-strong);
-    background: var(--color-highlight-soft);
-  }
-  100% {
-    box-shadow: none;
-    background: transparent;
   }
 }
 

@@ -14,3 +14,18 @@
   font-size: 1.1rem;
 }
 
+/*===== レスポンシブ =====*/
+/* タブレット以下 */
+@media (max-width: 1024px) {
+  .hero {
+    padding: var(--space-6) var(--space-3);
+  }
+}
+
+/* スマホ以下 */
+@media (max-width: 768px) {
+  .hero {
+    padding: var(--space-5) var(--space-2);
+  }
+}
+

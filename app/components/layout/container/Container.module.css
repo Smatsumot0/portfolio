@@ -1,4 +1,19 @@
 .container {
-  padding-inline: clamp(20px, 5vw, 4rem);
+  padding-inline: var(--space-5);
+}
+
+/*===== レスポンシブ =====*/
+/* タブレット以下 */
+@media (max-width: 1024px) {
+  .container {
+    padding-inline: var(--space-4);
+  }
+}
+
+/* スマホ以下 */
+@media (max-width: 768px) {
+  .container {
+    padding-inline: var(--space-2);
+  }
 }
 

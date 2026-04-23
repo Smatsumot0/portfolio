@@ -1,4 +1,4 @@
-.stack {
+.body {
   padding: var(--space-2) var(--space-5) var(--space-4);
   display: grid;
   gap: var(--space-7);
@@ -12,5 +12,20 @@
 .section {
   display: grid;
   gap: var(--space-4);
+}
+
+/*===== レスポンシブ =====*/
+/* タブレット以下 */
+@media (max-width: 1024px) {
+  .body {
+    padding-inline: var(--space-4);
+  }
+}
+
+/* スマホ以下 */
+@media (max-width: 768px) {
+  .body {
+    padding-inline: var(--space-2);
+  }
 }
 

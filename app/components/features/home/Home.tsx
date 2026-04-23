@@ -10,7 +10,7 @@ import clsx from "clsx"
 
 export function Home() {
   return (
-    <div className={clsx("container", styles.home)}>
+    <div className={clsx("content-width", styles.home)}>
       <Hero />
       <SectionGroup>
         <About />

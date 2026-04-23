@@ -4,9 +4,23 @@
   gap: var(--gap);
 }
 
-/* デフォルト：レスポンシブ（1列化する） */
+/*===== レスポンシブ =====*/
+/* タブレット以下 */
 @media (max-width: 1024px) {
+  .twoColumn {
+    gap: var(--gap-tablet);
+  }
+
+  /* デフォルト：レスポンシブ（1列化する） */
   .responsive {
     grid-template-columns: 1fr;
   }
 }
+
+/* スマホ以下 */
+@media (max-width: 768px) {
+  .twoColumn {
+    gap: var(--gap-mobile);
+  }
+}
+

@@ -1,4 +1,4 @@
-export * from "./ItemStack"
+export * from "./ItemBody"
 export * from "./ItemContent"
 export * from "./ItemSection"
 export * from "./ItemHeader"

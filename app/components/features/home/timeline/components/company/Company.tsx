@@ -2,7 +2,7 @@ import styles from "./Company.module.css"
 import { TimelineCompany } from "../../types"
 import { ProjectItem } from "../project-item/ProjectItem"
 import { StackItem, TwoColumn } from "@/app/components/layout"
-import { ItemStack, ItemHeader } from "@/app/components/ui"
+import { ItemBody, ItemHeader } from "@/app/components/ui"
 import { formatYM } from "@/app/lib/date"
 
 type CompanyProps = {
@@ -41,7 +41,7 @@ export function Company({ company }: CompanyProps) {
           </div>
         }
         rightContent={
-          <ItemStack className={styles.content}>
+          <ItemBody className={styles.content}>
             <ItemHeader className={styles.header}>
               <p className={styles.meta}>
                 <span className={styles.companyName}>{companyName}</span>
@@ -56,7 +56,7 @@ export function Company({ company }: CompanyProps) {
                 <ProjectItem key={project.id} project={project} />
               ))}
             </ul>
-          </ItemStack>
+          </ItemBody>
         }
       />
     </StackItem>

@@ -20,3 +20,18 @@ body[data-section="contact"] #contact {
   }
 }
 
+/*===== レスポンシブ =====*/
+/* タブレット以下 */
+@media (max-width: 1024px) {
+  .section {
+    padding: var(--space-4) var(--space-3);
+  }
+}
+
+/* スマホ以下 */
+@media (max-width: 768px) {
+  .section {
+    padding: var(--space-3) var(--space-1);
+  }
+}
+
