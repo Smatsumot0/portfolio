@@ -9,15 +9,15 @@ type SplashDrop = {
 const colors = ["var(--drop-blue)", "var(--drop-light)", "var(--drop-pale)"]
 
 export const splashDrops: SplashDrop[] = [
-  { id: 1, size: 16, color: colors[0], xRatio: 0.08, yRatio: 0.78 },
-  { id: 2, size: 10, color: colors[1], xRatio: 0.12, yRatio: 0.55 },
+  { id: 1, size: 16, color: colors[1], xRatio: 0.08, yRatio: 0.78 },
+  { id: 2, size: 10, color: colors[0], xRatio: 0.12, yRatio: 0.55 },
   { id: 3, size: 6, color: colors[2], xRatio: 0.16, yRatio: 0.88 },
   { id: 4, size: 14, color: colors[0], xRatio: 0.2, yRatio: 0.72 },
   { id: 5, size: 5, color: colors[1], xRatio: 0.24, yRatio: 0.48 },
   { id: 6, size: 12, color: colors[2], xRatio: 0.28, yRatio: 0.83 },
   { id: 7, size: 7, color: colors[0], xRatio: 0.32, yRatio: 0.66 },
   { id: 8, size: 4, color: colors[1], xRatio: 0.36, yRatio: 0.42 },
-  { id: 9, size: 11, color: colors[2], xRatio: 0.4, yRatio: 0.76 },
+  { id: 9, size: 11, color: colors[1], xRatio: 0.4, yRatio: 0.76 },
   { id: 10, size: 6, color: colors[0], xRatio: 0.44, yRatio: 0.58 },
   { id: 11, size: 4, color: colors[1], xRatio: 0.47, yRatio: 0.89 },
   { id: 12, size: 9, color: colors[2], xRatio: 0.5, yRatio: 0.7 },
@@ -31,7 +31,7 @@ export const splashDrops: SplashDrop[] = [
   { id: 20, size: 4, color: colors[1], xRatio: 0.8, yRatio: 0.67 },
   { id: 21, size: 12, color: colors[2], xRatio: 0.84, yRatio: 0.52 },
   { id: 22, size: 6, color: colors[0], xRatio: 0.88, yRatio: 0.8 },
-  { id: 23, size: 14, color: colors[1], xRatio: 0.92, yRatio: 0.46 },
+  { id: 23, size: 14, color: colors[0], xRatio: 0.92, yRatio: 0.46 },
   { id: 24, size: 8, color: colors[2], xRatio: 0.96, yRatio: 0.69 },
 ]
 

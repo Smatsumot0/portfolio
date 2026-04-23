@@ -13,6 +13,14 @@ type DropStyle = CSSProperties & {
   "--drop-color": string
 }
 
+function clamp(value: number, min: number, max: number) {
+  return Math.min(max, Math.max(min, value))
+}
+
+function expand(value: number, center = 0.5, strength = 1) {
+  return center + (value - center) * strength
+}
+
 export function Splash() {
   // ドロップのサイズに応じて、移動距離やアニメーションのタイミングを調整するためのパラメータ
   const minSize = 4
@@ -35,9 +43,32 @@ export function Splash() {
         const xOffset = base + distance * scale + sizeRatio * 0.015
         const yOffset = distance * 0.3 + sizeRatio * 0.02
 
+        const paddingX = 0.02 + sizeRatio * 0.04
+        const paddingY = 0.04 + sizeRatio * 0.06
+
+        // ドロップの終了位置を計算
+        const variance = (drop.id % 3) * 0.03
+
+        const endXRatio = clamp(
+          expand(drop.xRatio, 0.5, 1.12 + variance),
+          paddingX,
+          1 - paddingX,
+        )
+
+        const endYRatio = clamp(
+          expand(drop.yRatio, 0.7, 1.15),
+          paddingY,
+          1 - paddingY,
+        )
+
         // ドロップの開始位置を計算
-        const startXRatio = drop.xRatio + xOffset * direction
-        const startYRatio = drop.yRatio + yOffset
+        const startXRatio = clamp(
+          endXRatio + xOffset * direction,
+          paddingX,
+          1 - paddingX,
+        )
+
+        const startYRatio = clamp(endYRatio + yOffset, paddingY, 1 - paddingY)
 
         // ドロップのサイズと位置に基づいて、アニメーションの遅延と持続時間を計算
         const delay =
@@ -48,14 +79,21 @@ export function Splash() {
           "--size": `${drop.size}px`,
           "--start-x": `${startXRatio * 100}%`,
           "--start-y": `${startYRatio * 100}%`,
-          "--end-x": `${drop.xRatio * 100}%`,
-          "--end-y": `${drop.yRatio * 100}%`,
+          "--end-x": `${endXRatio * 100}%`,
+          "--end-y": `${endYRatio * 100}%`,
           "--delay": `${delay}s`,
           "--duration": `${duration}s`,
           "--drop-color": drop.color,
         }
 
-        return <span key={drop.id} className={styles.drop} style={style} />
+        return (
+          <span
+            key={drop.id}
+            data-key={drop.id}
+            className={styles.drop}
+            style={style}
+          />
+        )
       })}
     </div>
   )

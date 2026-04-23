@@ -52,7 +52,7 @@ export function HeaderNav() {
               <Link
                 to={item.id}
                 offset={-90}
-                className={styles.link}
+                className={clsx(styles.link, styles.pcLink)}
                 {...scrollOptions}>
                 {item.label}
               </Link>

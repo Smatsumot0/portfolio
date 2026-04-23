@@ -6,24 +6,29 @@
 
 .splash {
   position: absolute;
-  top: 0;
+  top: var(--height-navigation);
   left: 0;
+
   width: 100%;
-  height: var(--height-header);
+  height: calc(var(--height-header) - var(--height-navigation));
   pointer-events: none;
+  overflow: hidden;
 }
 
 .drop {
   position: absolute;
-  width: var(--size);
-  height: var(--size);
-  border: 1px solid
-    color-mix(in srgb, var(--drop-color) 70%, var(--color-main) 30%);
-  background: var(--drop-color);
-  filter: blur(0.5px);
-  border-radius: var(--radius-full);
   left: var(--end-x);
   top: var(--end-y);
+
+  width: var(--size);
+  height: var(--size);
+
+  border: 1px solid
+    color-mix(in srgb, var(--drop-color) 70%, var(--color-main) 30%);
+  border-radius: var(--radius-full);
+  background: var(--drop-color);
+  filter: blur(0.5px);
+
   transform: translate(-50%, -50%) scale(1);
   animation: spread var(--duration) ease-out var(--delay) backwards;
 }
@@ -53,7 +58,12 @@
 /* スマホ以下 */
 @media (max-width: 768px) {
   .splash {
-    height: var(--height-mobile-header);
+    height: calc(var(--height-mobile-header) - var(--height-navigation));
+  }
+
+  .drop {
+    width: calc(var(--size) * 0.5);
+    height: calc(var(--size) * 0.5);
   }
 }
 

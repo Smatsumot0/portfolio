@@ -11,13 +11,13 @@
   height: var(--height-navigation);
   position: fixed;
   z-index: 1;
-  padding: var(--space-4) var(--space-8);
+  padding: 0 var(--space-8);
   background: var(--color-base);
 }
 
 .logo {
   position: relative;
-  height: 100%;
+  height: 70%;
   aspect-ratio: 1 / 1;
   cursor: pointer;
 }
@@ -41,7 +41,6 @@
   }
 
   .navigation {
-    height: var(--height-mobile-navigation);
     padding-inline: var(--space-4);
   }
 }

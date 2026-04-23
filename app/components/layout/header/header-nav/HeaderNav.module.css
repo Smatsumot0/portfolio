@@ -15,7 +15,7 @@
 
 /*===== PC =====*/
 .pcLink {
-  margin-left: 2rem;
+  padding: var(--space-3) var(--space-2);
 }
 
 .pcNav {

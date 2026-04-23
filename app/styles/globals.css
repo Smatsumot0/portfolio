@@ -5,12 +5,10 @@
 
   --max-width-text: 640px;
 
-  --height-header: 180px;
-  --height-navigation: 90px;
+  --height-header: 170px;
+  --height-mobile-header: 140px;
+  --height-navigation: 70px;
   --height-footer: 100px;
-
-  --height-mobile-header: 144px;
-  --height-mobile-navigation: 72px;
 
   --max-height-scroll-panel: min(72vh, 920px);
 
