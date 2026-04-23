@@ -14,24 +14,24 @@
 
   --gutter: clamp(8px, 2vw, 32px);
 
-  --color-main: #0265da;
-  --color-base: #f6f7f9;
+  --color-main: #0072f5;
+  --color-base: #fbfdff;
 
-  --color-text-primary: #3f4552;
-  --color-text-secondary: #5b6b8c;
+  --color-text-primary: #1f2937;
+  --color-text-secondary: #4b5b7a;
 
-  --color-highlight-soft: rgba(2, 101, 218, 0.04);
-  --color-highlight: rgba(2, 101, 218, 0.06);
-  --color-highlight-strong: rgba(2, 101, 218, 0.1);
+  --color-highlight-soft: rgba(0, 114, 245, 0.06);
+  --color-highlight: rgba(0, 114, 245, 0.1);
+  --color-highlight-strong: rgba(0, 114, 245, 0.16);
 
   --color-wave-base: var(--color-main);
   --color-wave-back: var(--color-blue-300);
   --color-wave-front: var(--color-blue-500);
 
-  --color-blue-200: #4096f0;
-  --color-blue-300: #69b8ff;
-  --color-blue-400: #7fbff9;
-  --color-blue-500: #a9dbff;
+  --color-blue-200: #3f9cff;
+  --color-blue-300: #74c0ff;
+  --color-blue-400: #a8dbff;
+  --color-blue-500: #d9f0ff;
 
   /* border-radius */
   --radius-xs: 4px;
