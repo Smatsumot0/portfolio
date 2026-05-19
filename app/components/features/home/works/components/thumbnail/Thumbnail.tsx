@@ -1,13 +1,19 @@
 import styles from "./Thumbnail.module.css"
 import clsx from "clsx"
+import Image from "next/image"
 
 export type ThumbnailProps = {
   src?: string
+  alt?: string
 }
 
-export function Thumbnail({ src }: ThumbnailProps) {
+export function Thumbnail({ src, alt = "" }: ThumbnailProps) {
   if (src) {
-    return <div className={styles.root}></div>
+    return (
+      <div className={styles.root}>
+        <Image src={src} alt={alt} fill className={styles.image} sizes="100px" />
+      </div>
+    )
   }
 
   return (

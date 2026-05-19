@@ -26,6 +26,7 @@ export function Card({ work }: CardProps) {
     techStack,
     appUrl,
     githubUrl,
+    thumbnailUrl,
     status,
   } = work
   const buttons = [
@@ -43,7 +44,7 @@ export function Card({ work }: CardProps) {
         responsive={false}
         leftContent={
           <div className={styles.media}>
-            <Thumbnail />
+            <Thumbnail src={thumbnailUrl} alt={`${title} screenshot`} />
             <Badge status={status} />
           </div>
         }

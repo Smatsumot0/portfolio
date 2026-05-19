@@ -8,6 +8,11 @@
   margin-top: var(--space-1);
 }
 
+.image {
+  object-fit: cover;
+  object-position: top center;
+}
+
 .waveBack,
 .waveFront {
   position: absolute;

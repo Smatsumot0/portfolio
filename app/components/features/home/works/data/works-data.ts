@@ -21,7 +21,7 @@ export const worksData: Work[] = [
     ],
     appUrl: "",
     githubUrl: "https://github.com/Smatsumot0/lunimo",
-    thumbnailUrl: "",
+    thumbnailUrl: "/images/works/lunimo.png",
     status: "inProgress",
   },
   {
